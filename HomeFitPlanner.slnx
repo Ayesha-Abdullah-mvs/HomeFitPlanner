@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="HomeFitPlanner.Core/HomeFitPlanner.Core.csproj" />
+  <Project Path="HomeFitPlanner.Tests/HomeFitPlanner.Tests.csproj" />
+  <Project Path="HomeFitPlanner.UI/HomeFitPlanner.UI.csproj" />
+</Solution>
