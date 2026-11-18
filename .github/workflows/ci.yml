@@ -34,11 +34,6 @@ jobs:
         run: |
           dotnet publish HomeFitPlanner.UI/HomeFitPlanner.UI.csproj -c Release -o publish/UI
 
-      - name: Publish Web project (optional)
-        if: always()
-        run: |
-          dotnet publish HomeFitPlanner.Web/HomeFitPlanner.Web.csproj -c Release -o publish/Web
-
       - name: Upload published binaries
         uses: actions/upload-artifact@v4
         with:
@@ -50,22 +45,20 @@ jobs:
         with:
           name: test-results
           path: test_results.trx
+
   deploy-pages:
     needs: build-test-publish
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # required to push to gh-pages
+      contents: write
     steps:
-      - name: Download published web artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: HomeFitPlanner-binaries
-          path: artifact
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy wwwroot to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: artifact/publish/Web
+          publish_dir: HomeFitPlanner.Web/wwwroot
           keep_files: false
           force_orphan: true
