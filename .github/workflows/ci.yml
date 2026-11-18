@@ -1,0 +1,52 @@
+name: CI – Build, Test & Publish
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test-publish:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore NuGet packages
+        run: dotnet restore HomeFitPlanner.sln
+
+      - name: Build solution (Release)
+        run: dotnet build HomeFitPlanner.sln -c Release --no-restore
+
+      - name: Run tests
+        run: dotnet test HomeFitPlanner.Tests/HomeFitPlanner.Tests.csproj -c Release --no-build --logger "trx;LogFileName=test_results.trx"
+
+      - name: Publish UI project
+        run: |
+          dotnet publish HomeFitPlanner.UI/HomeFitPlanner.UI.csproj -c Release -o publish/UI
+
+      - name: Publish Web project (optional)
+        if: always()
+        run: |
+          dotnet publish HomeFitPlanner.Web/HomeFitPlanner.Web.csproj -c Release -o publish/Web
+
+      - name: Upload published binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: HomeFitPlanner-binaries
+          path: publish/**
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test_results.trx
