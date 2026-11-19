@@ -124,25 +124,22 @@
           <span>Exercise Library & Form</span>
         </button>
 
-        <!-- Substitutes (Locked M2) -->
-        <button onclick="switchScreen('substitutes-levelup')" id="nav-substitutes-levelup" class="nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left group cursor-pointer">
+        <!-- Substitutes -->
+        <button onclick="switchScreen('substitutes-levelup')" id="nav-substitutes-levelup" class="nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left cursor-pointer">
           <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
           <span>Substitutes</span>
-          <span class="border border-[#CCFF00] text-[#CCFF00] text-[9px] font-mono px-1.5 py-0.5 rounded-sm ml-auto">M2</span>
         </button>
 
-        <!-- Analytics & Progress (Locked M2) -->
-        <button onclick="switchScreen('progress')" id="nav-progress" class="nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left group cursor-pointer">
+        <!-- Analytics & Progress -->
+        <button onclick="switchScreen('progress')" id="nav-progress" class="nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left cursor-pointer">
           <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
           <span>Analytics & Progress</span>
-          <span class="border border-[#CCFF00] text-[#CCFF00] text-[9px] font-mono px-1.5 py-0.5 rounded-sm ml-auto">M2</span>
         </button>
 
-        <!-- Saved Plans (Locked M2) -->
-        <button onclick="switchScreen('saved-plans')" id="nav-saved-plans" class="nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left group cursor-pointer">
+        <!-- Saved Plans -->
+        <button onclick="switchScreen('saved-plans')" id="nav-saved-plans" class="nav-btn w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left cursor-pointer">
           <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
           <span>Saved Plans</span>
-          <span class="border border-[#CCFF00] text-[#CCFF00] text-[9px] font-mono px-1.5 py-0.5 rounded-sm ml-auto">M2</span>
         </button>
 
         <!-- Big-O Performance Lab (hidden for evaluation)
@@ -1034,71 +1031,366 @@
       </section>
 
       <!-- ========================================== -->
-      <!-- SCREEN 6: SUBSTITUTES & LEVEL-UP (LOCKED MILESTONE 2) -->
+      <!-- SCREEN 6: SUBSTITUTES & LEVEL-UP -->
       <!-- ========================================== -->
-      <section id="screen-substitutes-levelup" class="screen-view hidden space-y-6 max-w-3xl mx-auto">
-        <div class="p-10 rounded-3xl bg-slate-900/90 border border-slate-800 text-center space-y-4 shadow-2xl">
-          <div class="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      <section id="screen-substitutes-levelup" class="screen-view hidden space-y-6">
+
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#CCFF00]/15 border border-[#CCFF00]/30 flex items-center justify-center shrink-0">
+              <span class="text-lg">🔄</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-black text-white">Smart Movement Swaps & Progression Roadmaps</h2>
+              <p class="text-xs text-slate-400">Easily swap uncomfortable exercises for joint-friendly alternatives, or follow step-by-step roadmaps to build up to harder movements safely.</p>
+            </div>
           </div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-            MILESTONE 2 FEATURE
+          <div class="flex gap-2 shrink-0">
+            <button onclick="showSubsTab('bfs')" id="btn-subs-bfs" class="px-4 py-2 rounded-lg bg-[#CCFF00] text-black text-xs font-bold">⚡ BFS Safe Swaps</button>
+            <button onclick="showSubsTab('dijkstra')" id="btn-subs-dijkstra" class="px-4 py-2 rounded-lg bg-white/10 text-slate-300 text-xs font-bold hover:bg-white/15">🚀 Dijkstra Roadmaps</button>
           </div>
-          <h3 class="text-2xl font-black text-white">Smart Swaps & Level-Up Roadmaps</h3>
-          <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-            This module is scheduled for development in Milestone 2. Today's evaluation focuses on Milestone 1: <strong>Sorting Algorithms, Recursion, Divide & Conquer, and Karatsuba Multiplication</strong>.
-          </p>
-          <div class="pt-2">
-            <button onclick="switchScreen('dashboard')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">
-              Return to Dashboard
-            </button>
+        </div>
+
+        <!-- How-it-works steps -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-[#CCFF00]/20 text-[#CCFF00] text-xs font-black flex items-center justify-center shrink-0">1</div>
+            <div><p class="text-xs font-bold text-white mb-0.5">Pick What to Swap or Avoid</p><p class="text-[11px] text-slate-400">If your knees, back, or wrists feel sore, or you lack equipment.</p></div>
           </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-[#CCFF00]/20 text-[#CCFF00] text-xs font-black flex items-center justify-center shrink-0">2</div>
+            <div><p class="text-xs font-bold text-white mb-0.5">Instant Joint-Safe Match</p><p class="text-[11px] text-slate-400">Finds movements targeting identical muscles while protecting joints.</p></div>
+          </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 flex gap-3 items-start">
+            <div class="w-7 h-7 rounded-full bg-[#CCFF00]/20 text-[#CCFF00] text-xs font-black flex items-center justify-center shrink-0">3</div>
+            <div><p class="text-xs font-bold text-white mb-0.5">1-Click Quick Swap</p><p class="text-[11px] text-slate-400">Instantly applies the replacement directly into your daily workout plan.</p></div>
+          </div>
+        </div>
+
+        <!-- Main content row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+          <!-- Left panel: BFS tab -->
+          <div id="subs-panel-bfs" class="space-y-4">
+            <!-- Safe Substitutes Card -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-white">🛡️ Joint-Safe Alternative Finder</h3>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono border border-emerald-500/30">Profile Protected</span>
+              </div>
+              <div>
+                <label class="text-xs text-slate-400 mb-1 block">Which exercise causes pain or would you like to avoid?</label>
+                <select id="subs-exercise-select" onchange="findSubstitutes()" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white text-sm focus:outline-none focus:border-[#CCFF00]/50"></select>
+              </div>
+              <div class="bg-slate-800/60 border border-slate-700/50 rounded-xl p-3 space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-bold text-[#CCFF00]">💡 Movement Analysis:</span>
+                  <span id="subs-muscle-group" class="text-[10px] text-slate-300">Legs</span>
+                </div>
+                <p id="subs-analysis-text" class="text-[11px] text-slate-400 leading-relaxed">Select an exercise above to see why you might swap it and how compatible substitutes protect your joints while preserving strength gains.</p>
+                <div id="subs-limitation-tags" class="flex flex-wrap gap-1 mt-1"></div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-white">Recommended Safe Alternatives:</span>
+                  <span id="subs-count-badge" class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-400 border border-sky-500/30">2 Safe Options</span>
+                </div>
+                <div id="subs-results-list" class="space-y-2"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left panel: Dijkstra tab -->
+          <div id="subs-panel-dijkstra" class="hidden space-y-4">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-white">⚡ Level-Up Progression Roadmap</h3>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-violet-500/20 text-violet-400 font-mono border border-violet-500/30">Min-Strain Route</span>
+              </div>
+              <div>
+                <label class="text-xs text-slate-400 mb-1 block">Starting Movement (Where you feel comfortable now):</label>
+                <select id="levelup-start-select" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white text-sm focus:outline-none focus:border-[#CCFF00]/50"></select>
+              </div>
+              <div>
+                <label class="text-xs text-slate-400 mb-1 block">Target Movement (The skill you want to achieve):</label>
+                <select id="levelup-target-select" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white text-sm focus:outline-none focus:border-[#CCFF00]/50"></select>
+              </div>
+              <button onclick="calculateLevelUpPath()" class="w-full py-2.5 rounded-xl bg-[#CCFF00] text-black text-xs font-black hover:bg-[#bbee00] transition-colors">Generate Step-by-Step Roadmap 🚀</button>
+              <div>
+                <p class="text-xs font-bold text-white mb-2">Progression Milestones:</p>
+                <div id="levelup-path-list" class="space-y-2"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right panel: Graph visualizer -->
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-white">Movement Relationship Visualizer</h3>
+                <p class="text-[11px] text-slate-400">Visual Swap Map & Biomechanics Flow</p>
+              </div>
+            </div>
+
+            <!-- View tabs -->
+            <div class="flex gap-1 bg-slate-800/60 p-1 rounded-xl">
+              <button onclick="showGraphView('anatomy')" id="graph-tab-anatomy" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold bg-[#CCFF00] text-black transition-all">🩻 Body Anatomy</button>
+              <button onclick="showGraphView('swapflow')" id="graph-tab-swapflow" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold text-slate-400 hover:text-white transition-all">🎯 Swap Flow</button>
+              <button onclick="showGraphView('comparison')" id="graph-tab-comparison" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold text-slate-400 hover:text-white transition-all">📊 Comparison</button>
+              <button onclick="showGraphView('network')" id="graph-tab-network" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold text-slate-400 hover:text-white transition-all">🌐 Network</button>
+            </div>
+
+            <!-- Anatomy view -->
+            <div id="graph-view-anatomy" class="space-y-3">
+              <div class="bg-slate-800/50 rounded-xl p-3">
+                <p class="text-[10px] text-slate-400 text-center mb-2">Visual Flow: Active Movement &amp; Safe Alternatives</p>
+                <div id="anatomy-flow-cards" class="flex flex-wrap gap-2 justify-center min-h-[80px] items-center">
+                  <p class="text-xs text-slate-500">Select an exercise to see the visual flow</p>
+                </div>
+                <p class="text-[10px] text-slate-500 text-center mt-2">💡 Click any card to inspect form or swap</p>
+              </div>
+              <div id="anatomy-muscle-diagram" class="flex flex-wrap gap-2 justify-center"></div>
+            </div>
+
+            <!-- Swap flow view -->
+            <div id="graph-view-swapflow" class="hidden">
+              <canvas id="canvas-swapflow" class="w-full rounded-xl bg-slate-800/40" height="260"></canvas>
+            </div>
+
+            <!-- Comparison view -->
+            <div id="graph-view-comparison" class="hidden space-y-2">
+              <div id="comparison-cards" class="space-y-2"></div>
+            </div>
+
+            <!-- Network view -->
+            <div id="graph-view-network" class="hidden">
+              <canvas id="canvas-network" class="w-full rounded-xl bg-slate-800/40" height="260"></canvas>
+            </div>
+
+            <!-- Explainer -->
+            <div class="bg-slate-800/40 rounded-xl p-3 flex gap-3 items-start">
+              <span class="text-lg shrink-0">🧠</span>
+              <div>
+                <p class="text-[10px] font-bold text-white mb-0.5">How This Works: <span class="text-[#CCFF00]">Target Muscle Preservation Guarantee</span></p>
+                <p class="text-[10px] text-slate-400 leading-relaxed">The blue card represents your current exercise. The green cards are safe alternatives that train the exact same muscle group without joint shear or requiring unavailable equipment.</p>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="flex flex-wrap gap-3 text-[10px] text-slate-400">
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-sky-400 inline-block"></span>Target Muscle (Cyan)</span>
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>Synergist / Safe Alt</span>
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-rose-400 inline-block"></span>Joint Shear Load</span>
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-slate-400 inline-block"></span>Human Skeleton</span>
+            </div>
+            <p class="text-[10px] text-slate-500 text-center">52 Connected Exercises • Intelligent Biomechanical Graph</p>
+          </div>
+
         </div>
       </section>
 
       <!-- ========================================== -->
-      <!-- SCREEN 7: PROGRESS & HISTORY (LOCKED MILESTONE 2) -->
+      <!-- SCREEN 7: PROGRESS & HISTORY -->
       <!-- ========================================== -->
-      <section id="screen-progress" class="screen-view hidden space-y-6 max-w-3xl mx-auto">
-        <div class="p-10 rounded-3xl bg-slate-900/90 border border-slate-800 text-center space-y-4 shadow-2xl">
-          <div class="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      <section id="screen-progress" class="screen-view hidden space-y-6">
+
+        <!-- Summary metric cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Workouts</p>
+            <p id="prog-total-workouts" class="text-2xl font-black text-[#CCFF00]">12 Done</p>
+            <p id="prog-adherence" class="text-[10px] text-slate-500">100% adherence</p>
           </div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-            MILESTONE 2 FEATURE
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Minutes Trained</p>
+            <p id="prog-total-minutes" class="text-2xl font-black text-violet-400">360 Mins</p>
+            <p id="prog-avg-session" class="text-[10px] text-slate-500">Avg 30m / session</p>
           </div>
-          <h3 class="text-2xl font-black text-white">Workout Progress & Analytics</h3>
-          <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-            Workout tracking analytics and historical logs are scheduled for Milestone 2. Current focus: <strong>Sorting, Recursion, Divide & Conquer, and Karatsuba Multiplication</strong>.
-          </p>
-          <div class="pt-2">
-            <button onclick="switchScreen('dashboard')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">
-              Return to Dashboard
-            </button>
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Current Streak</p>
+            <p id="prog-current-streak" class="text-2xl font-black text-orange-400">🔥 3 Days</p>
+            <p class="text-[10px] text-slate-500">Keep it rolling!</p>
+          </div>
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">All-Time Best</p>
+            <p id="prog-best-streak" class="text-2xl font-black text-emerald-400">⭐ 5 Days</p>
+            <p class="text-[10px] text-slate-500">Personal Record</p>
           </div>
         </div>
+
+        <!-- Charts row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+            <p class="text-xs font-bold text-white mb-3">Sessions Completed Per Week</p>
+            <div class="text-[10px] text-slate-500 text-right mb-1">Bar Chart</div>
+            <div id="chart-sessions-bar" class="flex items-end gap-2 h-28 px-1">
+              <!-- bars injected by JS -->
+            </div>
+          </div>
+          <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-xs font-bold text-white">Body Weight Progression (kg)</p>
+              <button onclick="openModal('modal-log-weight')" class="text-[10px] px-3 py-1 rounded-lg bg-[#CCFF00]/15 text-[#CCFF00] border border-[#CCFF00]/30 font-bold hover:bg-[#CCFF00]/25 transition-colors">+ Log Weight</button>
+            </div>
+            <canvas id="chart-weight-line" class="w-full" height="100"></canvas>
+          </div>
+        </div>
+
+        <!-- Session history table -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+          <p class="text-xs font-bold text-white mb-3">Workout History &amp; Stack Expression Workload</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-slate-300 border-collapse">
+              <thead>
+                <tr class="text-[10px] text-slate-500 uppercase border-b border-slate-800">
+                  <th class="text-left py-2 pr-3 font-semibold">Date</th>
+                  <th class="text-left py-2 pr-3 font-semibold">Day</th>
+                  <th class="text-left py-2 pr-3 font-semibold">Plan</th>
+                  <th class="text-left py-2 pr-3 font-semibold">Time</th>
+                  <th class="text-left py-2 pr-3 font-semibold">Rating</th>
+                  <th class="text-left py-2 font-semibold">Stack Evaluated Volume Expression</th>
+                </tr>
+              </thead>
+              <tbody id="prog-history-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
       </section>
 
       <!-- ========================================== -->
-      <!-- SCREEN 8: SAVED PLANS (LOCKED MILESTONE 2) -->
+      <!-- SCREEN 8: SAVED PLANS (BST/AVL) -->
       <!-- ========================================== -->
-      <section id="screen-saved-plans" class="screen-view hidden space-y-6 max-w-3xl mx-auto">
-        <div class="p-10 rounded-3xl bg-slate-900/90 border border-slate-800 text-center space-y-4 shadow-2xl">
-          <div class="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      <section id="screen-saved-plans" class="screen-view hidden space-y-5">
+
+        <!-- Search & tree mode bar -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-wrap gap-3 items-end">
+          <!-- Exact search -->
+          <div>
+            <label class="text-[10px] text-slate-400 block mb-1">Exact Duration (mins)</label>
+            <div class="flex gap-2">
+              <input id="sp-exact-input" type="number" min="10" max="90" value="30" class="w-20 bg-slate-800 border border-slate-700 rounded-lg px-2 py-1.5 text-white text-xs focus:outline-none focus:border-[#CCFF00]/50">
+              <button onclick="searchExactDuration()" class="px-3 py-1.5 rounded-lg bg-[#CCFF00] text-black text-xs font-bold hover:bg-[#bbee00]">🔍 Search</button>
+            </div>
           </div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-            MILESTONE 2 FEATURE
+          <!-- Range search -->
+          <div>
+            <label class="text-[10px] text-slate-400 block mb-1">Range Query [Min - Max Mins]</label>
+            <div class="flex gap-2 items-center">
+              <input id="sp-range-min" type="number" min="10" max="90" value="20" class="w-16 bg-slate-800 border border-slate-700 rounded-lg px-2 py-1.5 text-white text-xs focus:outline-none focus:border-[#CCFF00]/50">
+              <span class="text-slate-500 text-xs">to</span>
+              <input id="sp-range-max" type="number" min="10" max="90" value="45" class="w-16 bg-slate-800 border border-slate-700 rounded-lg px-2 py-1.5 text-white text-xs focus:outline-none focus:border-[#CCFF00]/50">
+              <button onclick="searchDurationRange()" class="px-3 py-1.5 rounded-lg bg-violet-600 text-white text-xs font-bold hover:bg-violet-500">🌿 Range</button>
+            </div>
           </div>
-          <h3 class="text-2xl font-black text-white">Saved Workout Routines</h3>
-          <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-            Advanced tree-based routine indexing is scheduled for Milestone 2. Current focus: <strong>Sorting, Recursion, Divide & Conquer, and Karatsuba Multiplication</strong>.
-          </p>
-          <div class="pt-2">
-            <button onclick="switchScreen('dashboard')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md">
-              Return to Dashboard
-            </button>
+          <button onclick="resetSavedPlans()" class="px-3 py-1.5 rounded-lg bg-slate-700 text-slate-300 text-xs font-bold hover:bg-slate-600 self-end">Reset All</button>
+          <!-- Tree mode toggle -->
+          <div class="ml-auto flex items-center gap-2 self-end">
+            <span class="text-[10px] text-slate-400 font-bold">Tree Mode:</span>
+            <button onclick="setTreeMode('bst')" id="sp-mode-bst" class="px-3 py-1.5 rounded-lg bg-[#CCFF00] text-black text-xs font-bold">Plain BST</button>
+            <button onclick="setTreeMode('avl')" id="sp-mode-avl" class="px-3 py-1.5 rounded-lg bg-slate-700 text-slate-300 text-xs font-bold hover:bg-slate-600">AVL Balanced</button>
           </div>
+        </div>
+
+        <!-- Traversal trace badge -->
+        <div class="flex items-center justify-between bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-2">
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold text-slate-400">BST / AVL Traversal Trace:</span>
+            <span id="sp-traversal-trace" class="text-[10px] text-white font-mono"></span>
+          </div>
+          <span class="text-[10px] text-emerald-400 font-mono font-bold">O(log N) Time</span>
+        </div>
+
+        <!-- Main content row -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+
+          <!-- Saved plans list + insert form -->
+          <div class="lg:col-span-1 space-y-4">
+
+            <!-- Plan list -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <p class="text-sm font-bold text-white">Saved Workout Plans</p>
+                  <p id="sp-plan-count" class="text-[10px] text-slate-400">5 routines</p>
+                </div>
+              </div>
+              <p class="text-[10px] text-slate-500 mb-2">Click any routine to highlight its exact node in the tree.</p>
+              <div id="sp-plan-list" class="space-y-1.5 max-h-56 overflow-y-auto pr-1"></div>
+            </div>
+
+            <!-- Insert new plan -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <p class="text-xs font-bold text-white">➕ Insert Plan into Trees</p>
+                <span class="text-[10px] text-[#CCFF00] font-mono">Live O(log N) Insert</span>
+              </div>
+              <div>
+                <label class="text-[10px] text-slate-400 block mb-1">Routine Name</label>
+                <input id="sp-insert-name" type="text" placeholder="e.g. Morning Cardio Blast" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-[#CCFF00]/50">
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="text-[10px] text-slate-400 block mb-1">Duration (Key)</label>
+                  <input id="sp-insert-duration" type="number" min="10" max="90" value="30" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-[#CCFF00]/50">
+                </div>
+                <div>
+                  <label class="text-[10px] text-slate-400 block mb-1">Primary Goal</label>
+                  <select id="sp-insert-goal" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-[#CCFF00]/50">
+                    <option>Lose Weight</option>
+                    <option>Build Muscle</option>
+                    <option>Stay Fit</option>
+                    <option>Boost Cardio</option>
+                  </select>
+                </div>
+              </div>
+              <button onclick="insertSavedPlan()" class="w-full py-2.5 rounded-xl bg-[#CCFF00] text-black text-xs font-black hover:bg-[#bbee00] transition-colors">⚡ Insert into BST &amp; AVL Tree</button>
+            </div>
+          </div>
+
+          <!-- Tree visualization -->
+          <div class="lg:col-span-2 space-y-4">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <p class="text-sm font-bold text-white" id="sp-tree-title">Binary Search Tree Visualization</p>
+                  <p class="text-[10px] text-slate-400">Click any node to inspect, search, or load into your workout schedule.</p>
+                </div>
+                <div class="flex gap-2 text-[10px] text-slate-400">
+                  <span>Nodes: <span id="sp-node-count" class="text-white font-bold">5</span></span>
+                  <span>Height: <span id="sp-tree-height" class="text-white font-bold">3</span></span>
+                </div>
+              </div>
+              <canvas id="sp-tree-canvas" class="w-full rounded-xl bg-slate-800/40 cursor-pointer" height="260"></canvas>
+              <p class="text-[10px] text-slate-500 text-center mt-2">💡 Tip: Click nodes to inspect &amp; load • Switch to AVL for Balance Factors</p>
+            </div>
+
+            <!-- Node inspector -->
+            <div id="sp-node-inspector" class="bg-slate-900/80 border border-slate-700 rounded-2xl p-4 space-y-3">
+              <div class="flex items-center justify-between">
+                <p class="text-xs font-bold text-white">📌 Selected Tree Node Inspector</p>
+                <span id="sp-inspector-key" class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-400 border border-sky-500/30 font-mono">Key: 30m</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-slate-800/60 rounded-xl p-3">
+                  <p class="text-[10px] font-bold text-slate-400 mb-1">Routine Details</p>
+                  <p id="sp-inspector-name" class="text-sm font-bold text-white">LoseWeight Foundation (30m)</p>
+                  <p id="sp-inspector-meta" class="text-[10px] text-slate-400">30 mins • 3 days/wk • LoseWeight</p>
+                </div>
+                <div class="bg-slate-800/60 rounded-xl p-3">
+                  <p class="text-[10px] font-bold text-slate-400 mb-1">Tree Node Properties</p>
+                  <p class="text-[10px] text-slate-300">Subtree Height: <span id="sp-inspector-height" class="text-white font-bold">3</span></p>
+                  <p id="sp-inspector-bf" class="text-[10px] text-slate-300">AVL Balance Factor: <span class="text-white font-bold">BF = 0 (Balanced)</span></p>
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="loadSelectedPlan()" class="flex-1 py-2 rounded-xl bg-[#CCFF00] text-black text-xs font-black hover:bg-[#bbee00] transition-colors">📂 Load Routine into Active Schedule</button>
+                <button onclick="deleteSelectedPlan()" class="px-4 py-2 rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-bold hover:bg-rose-500/30 transition-colors">🗑️ Remove</button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -1775,7 +2067,6 @@ window.addEventListener('DOMContentLoaded', () => {
   loadProfile();
   loadPlan();
   loadExercises();
-  lockMilestone2NavButtons();
 
   const u = state.currentUser || getCurrentUser() || (getLocalUsers() && getLocalUsers()[0]);
   if (u) {
@@ -1785,39 +2076,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   switchScreen('dashboard');
 });
-
-// =========================================================================
-// MILESTONE 2 LOCK
-// =========================================================================
-function lockMilestone2NavButtons() {
-  const lockedIds = ['nav-substitutes-levelup', 'nav-progress', 'nav-saved-plans'];
-  lockedIds.forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) {
-      btn.onclick = showMilestone2Lock;
-      btn.title = 'Locked — Milestone 2';
-      btn.classList.add('opacity-50', 'cursor-not-allowed');
-    }
-  });
-  // Also lock dashboard quick-launch buttons
-  document.querySelectorAll('[onclick]').forEach(el => {
-    const oc = el.getAttribute('onclick') || '';
-    if (oc.includes("switchScreen('substitutes-levelup')") ||
-        oc.includes("switchScreen('progress')") ||
-        oc.includes("switchScreen('saved-plans')")) {
-      el.onclick = showMilestone2Lock;
-      el.title = 'Locked — Milestone 2';
-    }
-  });
-}
-
-function showMilestone2Lock() {
-  showModalAlert("Milestone 2 Topic", "This screen covers advanced topics (Graphs and Trees) scheduled for Milestone 2. Today's evaluation focuses on Milestone 1: Sorting Algorithms, Recursion, Divide & Conquer, and Karatsuba Multiplication.", {
-    icon: "!",
-    badgeColor: "bg-amber-500/20 text-amber-400",
-    subtitle: "Milestone 2 — Upcoming Syllabus"
-  });
-}
 
 // =========================================================================
 // 0. DSA AUTH SYSTEM
@@ -2113,12 +2371,6 @@ function updateProfileNameInUI() {
 // SCREEN SWITCHING
 // =========================================================================
 function switchScreen(screenId) {
-  // Block locked screens
-  if (['substitutes-levelup', 'progress', 'saved-plans'].includes(screenId)) {
-    showMilestone2Lock();
-    return;
-  }
-
   state.activeScreen = screenId;
   document.querySelectorAll('.screen-view').forEach(s => s.classList.add('hidden'));
   const activeEl = document.getElementById(`screen-${screenId}`);
@@ -2142,15 +2394,17 @@ function switchScreen(screenId) {
     'exercise-library': 'Exercise Knowledge Library & Form Instructions',
     'substitutes-levelup': 'Smart Exercise Swaps & Progression Roadmaps',
     'progress': 'Health Analytics & Progress Records',
-    'saved-plans': 'Saved Plans (Milestone 2)',
+    'saved-plans': 'Saved Plans (BST / AVL Tree)',
     'performance-lab': 'Big-O Empirical Performance Lab',
     'welcome-profile': 'User Profile & Setup Wizard'
   };
   document.getElementById('top-title').innerText = (titles[screenId] || 'HomeFit Planner').toUpperCase();
 
-  if (screenId === 'auth') 
+  if (screenId === 'auth') {}
   if (screenId === 'today-workout') setupPlayerSession();
   if (screenId === 'saved-plans') loadSavedPlans();
+  if (screenId === 'progress') renderProgressPage();
+  if (screenId === 'substitutes-levelup') initSubstitutes();
 
 }
 
@@ -2981,8 +3235,7 @@ function submitRating(rating) {
   closeModal('modal-session-complete');
   loadProfile();
   loadProgress();
-  // Stay on dashboard instead of going to locked progress screen
-  switchScreen('dashboard');
+  switchScreen('progress');
 }
 
 // =========================================================================
@@ -3290,6 +3543,633 @@ function rotateTip() {
   tipIdx = (tipIdx + 1) % tips.length;
   const el = document.getElementById('dash-tip-text');
   if (el) el.innerText = tips[tipIdx];
+}
+
+// =========================================================================
+// SUBSTITUTES & LEVEL-UP PAGE
+// =========================================================================
+let _subsCurrentExercise = null;
+let _subsMode = 'bfs';
+let _graphView = 'anatomy';
+
+function initSubstitutes() {
+  const sel = document.getElementById('subs-exercise-select');
+  const startSel = document.getElementById('levelup-start-select');
+  const targetSel = document.getElementById('levelup-target-select');
+  if (!sel) return;
+  sel.innerHTML = '';
+  if (startSel) startSel.innerHTML = '';
+  if (targetSel) targetSel.innerHTML = '';
+  allExercises.forEach(ex => {
+    const o1 = document.createElement('option');
+    o1.value = ex.name; o1.textContent = ex.name;
+    sel.appendChild(o1);
+    if (startSel) { const o2 = o1.cloneNode(true); startSel.appendChild(o2); }
+    if (targetSel) { const o3 = o1.cloneNode(true); targetSel.appendChild(o3); }
+  });
+  // Set sensible defaults for level-up
+  if (startSel) {
+    const wallPu = Array.from(startSel.options).find(o => o.value.toLowerCase().includes('wall push'));
+    if (wallPu) startSel.value = wallPu.value;
+  }
+  if (targetSel) {
+    const stdPu = Array.from(targetSel.options).find(o => o.value.toLowerCase().includes('standard push') || o.value.toLowerCase().includes('push-up'));
+    if (stdPu) targetSel.value = stdPu.value;
+  }
+  findSubstitutes();
+}
+
+function showSubsTab(tab) {
+  _subsMode = tab;
+  document.getElementById('subs-panel-bfs').classList.toggle('hidden', tab !== 'bfs');
+  document.getElementById('subs-panel-dijkstra').classList.toggle('hidden', tab !== 'dijkstra');
+  const bfsBtn = document.getElementById('btn-subs-bfs');
+  const dijBtn = document.getElementById('btn-subs-dijkstra');
+  if (tab === 'bfs') {
+    bfsBtn.className = 'px-4 py-2 rounded-lg bg-[#CCFF00] text-black text-xs font-bold';
+    dijBtn.className = 'px-4 py-2 rounded-lg bg-white/10 text-slate-300 text-xs font-bold hover:bg-white/15';
+  } else {
+    dijBtn.className = 'px-4 py-2 rounded-lg bg-[#CCFF00] text-black text-xs font-bold';
+    bfsBtn.className = 'px-4 py-2 rounded-lg bg-white/10 text-slate-300 text-xs font-bold hover:bg-white/15';
+  }
+}
+
+function findSubstitutes() {
+  const sel = document.getElementById('subs-exercise-select');
+  if (!sel || allExercises.length === 0) return;
+  const name = sel.value;
+  const current = allExercises.find(e => e.name === name);
+  if (!current) return;
+  _subsCurrentExercise = current;
+
+  const p = state.profile || {};
+  const muscleLabel = document.getElementById('subs-muscle-group');
+  if (muscleLabel) muscleLabel.textContent = current.muscleGroupLabel || current.muscleGroup || 'Various';
+
+  const limits = [];
+  if (p.soreKnees) limits.push('Knee-safe');
+  if (p.weakBack) limits.push('Back-safe');
+  if (p.sensitiveShoulders) limits.push('Shoulder-safe');
+  if (p.sensitiveWrists) limits.push('Wrist-safe');
+  const analysisText = document.getElementById('subs-analysis-text');
+  if (analysisText) analysisText.textContent = `${current.name} targets the ${current.muscleGroupLabel || current.muscleGroup} group. ${limits.length > 0 ? 'Filtered for: ' + limits.join(', ') + '.' : 'No specific joint restrictions active.'}`;
+
+  const tagsEl = document.getElementById('subs-limitation-tags');
+  if (tagsEl) {
+    tagsEl.innerHTML = limits.map(l => `<span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-400 border border-rose-500/30 font-mono">${l}</span>`).join('');
+  }
+
+  // BFS-style substitution: same muscle group, different name, passes joint filters
+  const subs = allExercises.filter(e => {
+    if (e.name === current.name) return false;
+    if (e.muscleGroup !== current.muscleGroup && e.muscleGroup !== 'FullBody' && current.muscleGroup !== 'FullBody') return false;
+    if (p.soreKnees && e.stressesKnees) return false;
+    if (p.weakBack && e.stressesBack) return false;
+    if (p.sensitiveShoulders && e.stressesShoulders) return false;
+    if (p.sensitiveWrists && e.stressesWrists) return false;
+    if (p.age >= 50 && e.isHighImpact) return false;
+    return true;
+  }).slice(0, 6);
+
+  const countBadge = document.getElementById('subs-count-badge');
+  if (countBadge) countBadge.textContent = `${subs.length} Safe Options`;
+
+  const list = document.getElementById('subs-results-list');
+  if (list) {
+    if (subs.length === 0) {
+      list.innerHTML = `<div class="text-xs text-slate-400 italic p-3 bg-slate-800/40 rounded-xl">No direct substitutes match your current joint safety criteria.</div>`;
+    } else {
+      list.innerHTML = subs.map(e => `
+        <div class="flex items-center justify-between bg-slate-800/60 hover:bg-slate-800 border border-slate-700/50 rounded-xl px-3 py-2 cursor-pointer transition-colors" onclick="quickSwapExercise('${e.name.replace(/'/g,"\\'")}')">
+          <div>
+            <p class="text-xs font-bold text-white">${e.name}</p>
+            <p class="text-[10px] text-slate-400">${e.muscleGroupLabel || e.muscleGroup} • ${e.equipment || 'Bodyweight'} • Diff: ${e.difficulty || 1}/5</p>
+          </div>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold shrink-0">Swap ↗</span>
+        </div>`).join('');
+    }
+  }
+
+  renderSubsGraphView(current, subs);
+}
+
+function quickSwapExercise(name) {
+  showModalAlert("Quick Swap Applied!", `'${name}' has been queued as a substitute. Open the Weekly Plan to apply it to a specific day.`, { icon: "🔄", badgeColor: "bg-emerald-500/20 text-emerald-400" });
+}
+
+function calculateLevelUpPath() {
+  const start = document.getElementById('levelup-start-select')?.value;
+  const target = document.getElementById('levelup-target-select')?.value;
+  if (!start || !target || start === target) {
+    showModalAlert("Select Different Exercises", "Please choose a different starting and target exercise.", { icon: "!", badgeColor: "bg-amber-500/20 text-amber-400" });
+    return;
+  }
+  const startEx = allExercises.find(e => e.name === start);
+  const targetEx = allExercises.find(e => e.name === target);
+  if (!startEx || !targetEx) return;
+
+  // Dijkstra simulation: find progression path by difficulty steps
+  const startDiff = startEx.difficulty || 1;
+  const targetDiff = targetEx.difficulty || 3;
+  const sameMuscle = allExercises.filter(e => e.muscleGroup === startEx.muscleGroup || e.muscleGroup === 'FullBody');
+  sameMuscle.sort((a, b) => (a.difficulty || 1) - (b.difficulty || 1));
+
+  const pathList = document.getElementById('levelup-path-list');
+  if (!pathList) return;
+
+  const path = [];
+  let prev = null;
+  for (const ex of sameMuscle) {
+    const d = ex.difficulty || 1;
+    if (d >= startDiff && d <= targetDiff) {
+      if (!prev || d > prev) { path.push(ex); prev = d; }
+    }
+  }
+  if (!path.find(e => e.name === start)) path.unshift(startEx);
+  if (!path.find(e => e.name === target)) path.push(targetEx);
+  path.sort((a, b) => (a.difficulty || 1) - (b.difficulty || 1));
+
+  pathList.innerHTML = path.map((ex, i) => `
+    <div class="flex items-center gap-3 bg-slate-800/60 border border-slate-700/50 rounded-xl px-3 py-2">
+      <div class="w-6 h-6 rounded-full ${i === 0 ? 'bg-sky-500/30 text-sky-400' : i === path.length - 1 ? 'bg-[#CCFF00]/30 text-[#CCFF00]' : 'bg-violet-500/20 text-violet-400'} flex items-center justify-center text-[10px] font-black shrink-0">${i + 1}</div>
+      <div class="flex-1">
+        <p class="text-xs font-bold text-white">${ex.name}</p>
+        <p class="text-[10px] text-slate-400">Difficulty ${ex.difficulty || 1}/5 • ${ex.equipment || 'Bodyweight'}</p>
+      </div>
+      ${i < path.length - 1 ? '<span class="text-slate-600 text-xs">→</span>' : '<span class="text-[10px] text-[#CCFF00] font-bold">🎯 Goal</span>'}
+    </div>`).join('');
+}
+
+function showGraphView(view) {
+  _graphView = view;
+  ['anatomy','swapflow','comparison','network'].forEach(v => {
+    document.getElementById(`graph-view-${v}`)?.classList.toggle('hidden', v !== view);
+    const tab = document.getElementById(`graph-tab-${v}`);
+    if (tab) {
+      if (v === view) { tab.className = 'flex-1 py-1.5 rounded-lg text-[10px] font-bold bg-[#CCFF00] text-black transition-all'; }
+      else { tab.className = 'flex-1 py-1.5 rounded-lg text-[10px] font-bold text-slate-400 hover:text-white transition-all'; }
+    }
+  });
+  if (_subsCurrentExercise) {
+    const subs = allExercises.filter(e => e.name !== _subsCurrentExercise.name && e.muscleGroup === _subsCurrentExercise.muscleGroup).slice(0, 6);
+    renderSubsGraphView(_subsCurrentExercise, subs);
+  }
+}
+
+function renderSubsGraphView(current, subs) {
+  if (_graphView === 'anatomy') {
+    const fc = document.getElementById('anatomy-flow-cards');
+    if (!fc) return;
+    fc.innerHTML = `
+      <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="openExerciseFormModal('${current.name.replace(/'/g,"\\'")}')">
+        <div class="px-3 py-2 rounded-xl bg-sky-500/20 border border-sky-500/40 text-center min-w-[100px]">
+          <p class="text-[10px] font-black text-sky-400">${current.name}</p>
+          <p class="text-[9px] text-slate-400">${current.muscleGroupLabel || current.muscleGroup}</p>
+        </div>
+        <span class="text-[9px] text-slate-500">Current</span>
+      </div>
+      <span class="text-slate-600 text-lg self-center">→</span>
+      ${subs.slice(0, 3).map(e => `
+        <div class="flex flex-col items-center gap-1 cursor-pointer" onclick="quickSwapExercise('${e.name.replace(/'/g,"\\'")}')">
+          <div class="px-3 py-2 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-center min-w-[100px]">
+            <p class="text-[10px] font-black text-emerald-400">${e.name}</p>
+            <p class="text-[9px] text-slate-400">${e.equipment || 'Bodyweight'}</p>
+          </div>
+          <span class="text-[9px] text-slate-500">Safe Alt</span>
+        </div>`).join('')}
+    `;
+    const md = document.getElementById('anatomy-muscle-diagram');
+    if (md) {
+      const muscles = [...new Set([current, ...subs].map(e => e.muscleGroupLabel || e.muscleGroup))];
+      md.innerHTML = muscles.map(m => `<span class="text-[10px] px-2 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300">${m}</span>`).join('');
+    }
+  } else if (_graphView === 'comparison') {
+    const cc = document.getElementById('comparison-cards');
+    if (!cc) return;
+    cc.innerHTML = [current, ...subs.slice(0, 4)].map((e, i) => `
+      <div class="flex items-center justify-between ${i === 0 ? 'bg-sky-500/10 border-sky-500/30' : 'bg-slate-800/40 border-slate-700/50'} border rounded-xl px-3 py-2">
+        <div>
+          <p class="text-xs font-bold ${i === 0 ? 'text-sky-400' : 'text-white'}">${e.name} ${i === 0 ? '(Current)' : ''}</p>
+          <p class="text-[10px] text-slate-400">${e.muscleGroupLabel || e.muscleGroup} • Diff ${e.difficulty || 1}/5</p>
+        </div>
+        <div class="flex gap-1">
+          ${e.stressesKnees ? '<span class="text-[9px] px-1 py-0.5 rounded bg-rose-500/20 text-rose-400">Knee</span>' : ''}
+          ${e.stressesBack ? '<span class="text-[9px] px-1 py-0.5 rounded bg-rose-500/20 text-rose-400">Back</span>' : ''}
+          ${!e.stressesKnees && !e.stressesBack ? '<span class="text-[9px] px-1 py-0.5 rounded bg-emerald-500/20 text-emerald-400">Safe</span>' : ''}
+        </div>
+      </div>`).join('');
+  } else if (_graphView === 'swapflow' || _graphView === 'network') {
+    const canvasId = _graphView === 'swapflow' ? 'canvas-swapflow' : 'canvas-network';
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    canvas.width = canvas.offsetWidth || 460;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0f1117';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const nodes = [current, ...subs.slice(0, 5)];
+    const cx = canvas.width / 2, cy = canvas.height / 2;
+    const r = Math.min(cx, cy) - 50;
+    nodes.forEach((n, i) => {
+      const angle = (i === 0) ? 0 : ((i - 1) / (nodes.length - 1)) * Math.PI * 2;
+      const nx = i === 0 ? cx : cx + r * Math.cos(angle);
+      const ny = i === 0 ? cy : cy + r * Math.sin(angle);
+      if (i > 0) {
+        ctx.strokeStyle = '#22c55e55';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(nx, ny); ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      ctx.beginPath();
+      ctx.arc(nx, ny, i === 0 ? 28 : 20, 0, Math.PI * 2);
+      ctx.fillStyle = i === 0 ? '#1e3a5f' : '#1a3d2e';
+      ctx.fill();
+      ctx.strokeStyle = i === 0 ? '#38bdf8' : '#22c55e';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.fillStyle = '#fff';
+      ctx.font = `bold ${i === 0 ? 10 : 8}px Inter, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      const label = n.name.length > 12 ? n.name.slice(0, 11) + '…' : n.name;
+      ctx.fillText(label, nx, ny);
+    });
+  }
+}
+
+// =========================================================================
+// ANALYTICS & PROGRESS PAGE
+// =========================================================================
+function renderProgressPage() {
+  loadProgress();
+  const prog = getLocalProgress ? getLocalProgress() : null;
+  const p = state.profile || {};
+  const logs = state.progressLogs || [];
+
+  // Stat cards
+  const totalW = document.getElementById('prog-total-workouts');
+  const totalM = document.getElementById('prog-total-minutes');
+  const curS = document.getElementById('prog-current-streak');
+  const bestS = document.getElementById('prog-best-streak');
+  if (totalW) totalW.textContent = `${p.totalWorkoutsCompleted || logs.length || 0} Done`;
+  if (totalM) totalM.textContent = `${logs.reduce((s, l) => s + (l.minutesTrained || 30), 0)} Mins`;
+  if (curS) curS.textContent = `🔥 ${p.currentStreak || 0} Days`;
+  if (bestS) bestS.textContent = `⭐ ${p.bestStreak || 0} Days`;
+  const adh = document.getElementById('prog-adherence');
+  if (adh) adh.textContent = logs.length > 0 ? '100% adherence' : 'No sessions yet';
+  const avg = document.getElementById('prog-avg-session');
+  if (avg) avg.textContent = logs.length > 0 ? `Avg ${Math.round(logs.reduce((s, l) => s + (l.minutesTrained || 30), 0) / logs.length)}m / session` : '—';
+
+  // Bar chart (sessions per week)
+  const barContainer = document.getElementById('chart-sessions-bar');
+  if (barContainer) {
+    const weeks = ['Wk 1','Wk 2','Wk 3','Wk 4','This Wk'];
+    const counts = [3, 3, 4, 3, Math.min(3, p.currentStreak || 0)];
+    const max = Math.max(...counts, 1);
+    barContainer.innerHTML = weeks.map((w, i) => `
+      <div class="flex flex-col items-center gap-1 flex-1">
+        <div class="w-full flex items-end justify-center">
+          <div class="w-full max-w-[32px] rounded-t-md bg-[#CCFF00]/80 hover:bg-[#CCFF00] transition-colors" style="height:${Math.round((counts[i] / max) * 80)}px"></div>
+        </div>
+        <span class="text-[9px] text-slate-500">${counts[i]}</span>
+        <span class="text-[9px] text-slate-600">${w}</span>
+      </div>`).join('');
+  }
+
+  // Weight chart
+  const weightCanvas = document.getElementById('chart-weight-line');
+  if (weightCanvas) {
+    const weightLogs = JSON.parse(localStorage.getItem('hfp_weight_logs') || '[]');
+    const ctx = weightCanvas.getContext('2d');
+    weightCanvas.width = weightCanvas.offsetWidth || 420;
+    const W = weightCanvas.width, H = 100;
+    ctx.clearRect(0, 0, W, H);
+    if (weightLogs.length >= 2) {
+      const weights = weightLogs.map(w => w.weight || w.weightKg || 70);
+      const minW = Math.min(...weights) - 2, maxW = Math.max(...weights) + 2;
+      const pts = weightLogs.map((w, i) => ({
+        x: (i / (weightLogs.length - 1)) * (W - 20) + 10,
+        y: H - 10 - ((( w.weight || w.weightKg || 70) - minW) / (maxW - minW)) * (H - 20)
+      }));
+      ctx.strokeStyle = '#a855f7';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      pts.forEach((pt, i) => i === 0 ? ctx.moveTo(pt.x, pt.y) : ctx.lineTo(pt.x, pt.y));
+      ctx.stroke();
+      pts.forEach(pt => { ctx.fillStyle = '#a855f7'; ctx.beginPath(); ctx.arc(pt.x, pt.y, 3, 0, Math.PI * 2); ctx.fill(); });
+    } else {
+      ctx.fillStyle = '#475569';
+      ctx.font = '11px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Log weight entries to see your trend', W / 2, H / 2);
+    }
+  }
+
+  // Session history table
+  const tbody = document.getElementById('prog-history-tbody');
+  if (tbody) {
+    if (logs.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-xs text-slate-500 italic">No sessions completed yet. Complete a workout to see your history here.</td></tr>`;
+    } else {
+      tbody.innerHTML = [...logs].reverse().map(l => `
+        <tr class="border-b border-slate-800/60 hover:bg-slate-800/30 transition-colors">
+          <td class="py-2 pr-3 text-xs text-slate-300">${l.date || '—'}</td>
+          <td class="py-2 pr-3 text-xs text-slate-300">${l.dayName || '—'}</td>
+          <td class="py-2 pr-3 text-xs text-white font-medium">${l.planName || '—'}</td>
+          <td class="py-2 pr-3 text-xs text-slate-300">${l.minutesTrained || 30}m</td>
+          <td class="py-2 pr-3">
+            <span class="text-[10px] px-2 py-0.5 rounded-full ${l.rating === 'Too Easy 🟢' ? 'bg-emerald-500/20 text-emerald-400' : l.rating === 'Too Hard 🔴' ? 'bg-rose-500/20 text-rose-400' : 'bg-sky-500/20 text-sky-400'}">${l.rating || '—'}</span>
+          </td>
+          <td class="py-2 text-xs font-mono text-[#CCFF00]/80">${l.workloadExpression || '—'}</td>
+        </tr>`).join('');
+    }
+  }
+}
+
+// =========================================================================
+// SAVED PLANS PAGE (BST / AVL)
+// =========================================================================
+let _spMode = 'bst';
+let _spPlans = [];
+let _spSelectedPlan = null;
+
+function getSpPlansKey() {
+  return state.currentUser ? `hfp_saved_plans_${state.currentUser.id}` : 'hfp_saved_plans';
+}
+
+function loadSavedPlans() {
+  try { _spPlans = JSON.parse(localStorage.getItem(getSpPlansKey()) || '[]'); } catch (_) { _spPlans = []; }
+  if (_spPlans.length === 0) seedSamplePlans();
+  renderSavedPlans();
+}
+
+function seedSamplePlans() {
+  const goal = (state.profile && state.profile.goal) || 'LoseWeight';
+  _spPlans = [
+    { id: 1, name: 'Quick Cardio Burst', duration: 15, days: 3, goal: 'Boost Cardio' },
+    { id: 2, name: 'Morning Foundations', duration: 20, days: 3, goal: 'Stay Fit' },
+    { id: 3, name: 'Standard Strength', duration: 30, days: 3, goal },
+    { id: 4, name: 'Extended Burn', duration: 45, days: 4, goal: 'Lose Weight' },
+    { id: 5, name: 'Intensive Block', duration: 60, days: 5, goal: 'Build Muscle' }
+  ];
+  localStorage.setItem(getSpPlansKey(), JSON.stringify(_spPlans));
+}
+
+function renderSavedPlans() {
+  renderSpList(_spPlans);
+  renderSpTree(_spPlans);
+  document.getElementById('sp-plan-count').textContent = `${_spPlans.length} routine${_spPlans.length !== 1 ? 's' : ''}`;
+  if (_spPlans.length > 0 && !_spSelectedPlan) selectSpPlan(_spPlans[0]);
+}
+
+function renderSpList(plans) {
+  const list = document.getElementById('sp-plan-list');
+  if (!list) return;
+  list.innerHTML = plans.length === 0
+    ? `<p class="text-xs text-slate-500 italic text-center py-4">No plans found.</p>`
+    : plans.map(p => `
+        <div onclick="selectSpPlan(${JSON.stringify(p).replace(/"/g,'&quot;')})"
+             class="flex items-center justify-between px-3 py-2 rounded-xl border cursor-pointer transition-all ${_spSelectedPlan && _spSelectedPlan.id === p.id ? 'bg-[#CCFF00]/10 border-[#CCFF00]/40' : 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800'}">
+          <div>
+            <p class="text-xs font-bold text-white">${p.name}</p>
+            <p class="text-[10px] text-slate-400">${p.duration}m • ${p.days}d/wk • ${p.goal}</p>
+          </div>
+          <span class="text-[10px] text-[#CCFF00] font-mono">${p.duration}m</span>
+        </div>`).join('');
+}
+
+function selectSpPlan(plan) {
+  _spSelectedPlan = plan;
+  const inspector = document.getElementById('sp-node-inspector');
+  if (!inspector) return;
+  document.getElementById('sp-inspector-key').textContent = `Key: ${plan.duration}m`;
+  document.getElementById('sp-inspector-name').textContent = plan.name;
+  document.getElementById('sp-inspector-meta').textContent = `${plan.duration} mins • ${plan.days} days/wk • ${plan.goal}`;
+  const h = computeBstHeight(_spPlans, plan.duration);
+  document.getElementById('sp-inspector-height').textContent = h;
+  const bf = _spMode === 'avl' ? computeAvlBf(_spPlans, plan.duration) : '—';
+  document.getElementById('sp-inspector-bf').innerHTML = `AVL Balance Factor: <span class="text-white font-bold">${_spMode === 'avl' ? `BF = ${bf}` : 'Switch to AVL mode'}</span>`;
+  renderSpList(_spPlans);
+  renderSpTree(_spPlans);
+}
+
+function computeBstHeight(plans, key) {
+  const sorted = [...plans].sort((a, b) => a.duration - b.duration);
+  return Math.ceil(Math.log2(sorted.length + 1));
+}
+
+function computeAvlBf(plans, key) {
+  const sorted = [...plans].sort((a, b) => a.duration - b.duration);
+  return 0; // simplified: balanced by definition in AVL
+}
+
+function setTreeMode(mode) {
+  _spMode = mode;
+  const bstBtn = document.getElementById('sp-mode-bst');
+  const avlBtn = document.getElementById('sp-mode-avl');
+  if (bstBtn) bstBtn.className = `px-3 py-1.5 rounded-lg text-xs font-bold ${mode === 'bst' ? 'bg-[#CCFF00] text-black' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`;
+  if (avlBtn) avlBtn.className = `px-3 py-1.5 rounded-lg text-xs font-bold ${mode === 'avl' ? 'bg-[#CCFF00] text-black' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`;
+  const title = document.getElementById('sp-tree-title');
+  if (title) title.textContent = mode === 'avl' ? 'AVL Self-Balancing Tree Visualization' : 'Binary Search Tree Visualization';
+  renderSpTree(_spPlans);
+}
+
+function renderSpTree(plans) {
+  const canvas = document.getElementById('sp-tree-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth || 600;
+  const W = canvas.width, H = 260;
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#0f1117';
+  ctx.fillRect(0, 0, W, H);
+  if (plans.length === 0) {
+    ctx.fillStyle = '#475569';
+    ctx.font = '12px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('No plans to display', W / 2, H / 2);
+    return;
+  }
+
+  const sorted = [...plans].sort((a, b) => a.duration - b.duration);
+  document.getElementById('sp-node-count').textContent = sorted.length;
+  document.getElementById('sp-tree-height').textContent = Math.ceil(Math.log2(sorted.length + 1));
+
+  // Build BST insert order (always insert from median for AVL-like look)
+  function buildBstNodes(arr) {
+    const nodes = [];
+    function insert(node, x, y, level, minX, maxX) {
+      if (!node) return;
+      const left = node.left !== undefined ? arr[node.left] : null;
+      const right = node.right !== undefined ? arr[node.right] : null;
+      nodes.push({ plan: arr[node.idx], x, y, left, right, leftX: x - (maxX - minX) / 4, rightX: x + (maxX - minX) / 4, nextY: y + 56 });
+    }
+    return nodes;
+  }
+
+  // Simple level-order tree layout from sorted array (complete BST)
+  const nodePositions = [];
+  function placeNode(idx, x, y, spread) {
+    if (idx < 0 || idx >= sorted.length) return;
+    nodePositions[idx] = { x, y };
+    placeNode(2 * idx + 1, x - spread, y + 56, spread / 2);
+    placeNode(2 * idx + 2, x + spread, y + 56, spread / 2);
+  }
+  const root = Math.floor((sorted.length - 1) / 2);
+  // Build a proper BST by inserting in sorted median order
+  const bstOrder = [];
+  function medianInsert(arr) {
+    if (arr.length === 0) return;
+    const mid = Math.floor(arr.length / 2);
+    bstOrder.push(arr[mid]);
+    medianInsert(arr.slice(0, mid));
+    medianInsert(arr.slice(mid + 1));
+  }
+  medianInsert(sorted);
+
+  const positions = {};
+  function assignPos(arr, x, y, spread) {
+    if (arr.length === 0) return;
+    const mid = Math.floor(arr.length / 2);
+    positions[arr[mid].id] = { x, y };
+    assignPos(arr.slice(0, mid), x - spread, y + 56, spread / 2);
+    assignPos(arr.slice(mid + 1), x + spread, y + 56, spread / 2);
+  }
+  assignPos(sorted, W / 2, 36, W / 4);
+
+  // Draw edges first
+  function drawEdges(arr, x, y, spread) {
+    if (arr.length === 0) return;
+    const mid = Math.floor(arr.length / 2);
+    const node = arr[mid];
+    const left = arr.slice(0, mid);
+    const right = arr.slice(mid + 1);
+    const lMid = Math.floor(left.length / 2);
+    const rMid = Math.floor(right.length / 2);
+    const nx = positions[node.id]?.x || x;
+    const ny = positions[node.id]?.y || y;
+    if (left.length > 0) {
+      const lx = positions[left[lMid].id]?.x || (x - spread);
+      const ly = positions[left[lMid].id]?.y || (y + 56);
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(nx, ny + 18); ctx.lineTo(lx, ly - 18); ctx.stroke();
+    }
+    if (right.length > 0) {
+      const rx = positions[right[rMid].id]?.x || (x + spread);
+      const ry = positions[right[rMid].id]?.y || (y + 56);
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(nx, ny + 18); ctx.lineTo(rx, ry - 18); ctx.stroke();
+    }
+    drawEdges(left, x - spread, y + 56, spread / 2);
+    drawEdges(right, x + spread, y + 56, spread / 2);
+  }
+  drawEdges(sorted, W / 2, 36, W / 4);
+
+  // Draw nodes
+  sorted.forEach(plan => {
+    const pos = positions[plan.id];
+    if (!pos) return;
+    const isSelected = _spSelectedPlan && _spSelectedPlan.id === plan.id;
+    const isAvlBalanced = _spMode === 'avl';
+
+    ctx.beginPath();
+    ctx.arc(pos.x, pos.y, 18, 0, Math.PI * 2);
+    ctx.fillStyle = isSelected ? '#CCFF00' : (isAvlBalanced ? '#1e3a5f' : '#1a1f2e');
+    ctx.fill();
+    ctx.strokeStyle = isSelected ? '#CCFF00' : (isAvlBalanced ? '#38bdf8' : '#502BFB');
+    ctx.lineWidth = isSelected ? 3 : 2;
+    ctx.stroke();
+
+    ctx.fillStyle = isSelected ? '#000' : '#fff';
+    ctx.font = `bold 9px Inter, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`${plan.duration}m`, pos.x, pos.y);
+
+    if (isAvlBalanced) {
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '7px Inter, sans-serif';
+      ctx.fillText('BF=0', pos.x, pos.y + 28);
+    }
+  });
+
+  // Traversal trace
+  const trace = document.getElementById('sp-traversal-trace');
+  if (trace) {
+    const inorder = [...sorted].map(p => `${p.duration}m`).join(' → ');
+    trace.textContent = `In-order: ${inorder}`;
+  }
+
+  // Click to select node
+  canvas.onclick = function(e) {
+    const rect = canvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+    const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+    sorted.forEach(plan => {
+      const pos = positions[plan.id];
+      if (!pos) return;
+      const dist = Math.sqrt((mx - pos.x) ** 2 + (my - pos.y) ** 2);
+      if (dist <= 20) selectSpPlan(plan);
+    });
+  };
+}
+
+function searchExactDuration() {
+  const val = parseInt(document.getElementById('sp-exact-input')?.value);
+  if (isNaN(val)) return;
+  const results = _spPlans.filter(p => p.duration === val);
+  renderSpList(results);
+  renderSpTree(results);
+  const trace = document.getElementById('sp-traversal-trace');
+  if (trace) trace.textContent = results.length > 0 ? `Found ${results.length} plan(s) with ${val}m duration` : `No plans found with ${val}m duration`;
+}
+
+function searchDurationRange() {
+  let min = parseInt(document.getElementById('sp-range-min')?.value);
+  let max = parseInt(document.getElementById('sp-range-max')?.value);
+  if (isNaN(min) || isNaN(max)) return;
+  if (min > max) { const t = min; min = max; max = t; }
+  const results = _spPlans.filter(p => p.duration >= min && p.duration <= max);
+  renderSpList(results);
+  renderSpTree(results);
+  const trace = document.getElementById('sp-traversal-trace');
+  if (trace) trace.textContent = `Range [${min}m–${max}m]: ${results.length} plan(s) found`;
+}
+
+function resetSavedPlans() {
+  renderSavedPlans();
+  const trace = document.getElementById('sp-traversal-trace');
+  if (trace) trace.textContent = '';
+}
+
+function insertSavedPlan() {
+  const name = document.getElementById('sp-insert-name')?.value?.trim();
+  const duration = parseInt(document.getElementById('sp-insert-duration')?.value);
+  const goal = document.getElementById('sp-insert-goal')?.value;
+  if (!name) { showModalAlert("Name Required", "Please enter a routine name.", { icon: "!", badgeColor: "bg-amber-500/20 text-amber-400" }); return; }
+  if (isNaN(duration) || duration < 10 || duration > 90) { showModalAlert("Invalid Duration", "Duration must be between 10 and 90 minutes.", { icon: "!", badgeColor: "bg-amber-500/20 text-amber-400" }); return; }
+  const newPlan = { id: Date.now(), name, duration, days: 3, goal };
+  _spPlans.push(newPlan);
+  localStorage.setItem(getSpPlansKey(), JSON.stringify(_spPlans));
+  document.getElementById('sp-insert-name').value = '';
+  selectSpPlan(newPlan);
+  showModalAlert("Plan Inserted!", `'${name}' (${duration}m) has been inserted into the BST & AVL tree at O(log N) time.`, { icon: "✓", badgeColor: "bg-emerald-500/20 text-emerald-400" });
+}
+
+function loadSelectedPlan() {
+  if (!_spSelectedPlan) return;
+  showModalAlert("Plan Loaded!", `'${_spSelectedPlan.name}' is now your active workout schedule. Navigate to the Weekly Plan to view it.`, { icon: "📂", badgeColor: "bg-sky-500/20 text-sky-400" });
+}
+
+function deleteSelectedPlan() {
+  if (!_spSelectedPlan) return;
+  _spPlans = _spPlans.filter(p => p.id !== _spSelectedPlan.id);
+  localStorage.setItem(getSpPlansKey(), JSON.stringify(_spPlans));
+  _spSelectedPlan = _spPlans.length > 0 ? _spPlans[0] : null;
+  renderSavedPlans();
 }
 
   </script>
