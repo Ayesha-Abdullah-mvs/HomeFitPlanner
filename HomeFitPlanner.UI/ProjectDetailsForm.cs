@@ -125,7 +125,7 @@ public class ProjectDetailsForm : Form
         // Single Action Button: GitHub Repository Only (as requested)
         var btnGithub = new Button
         {
-            Text = "🐙   GitHub Repository",
+            Text = "GitHub Repository",
             Font = new Font("Segoe UI", 9.5f, FontStyle.Bold),
             ForeColor = Color.White,
             BackColor = Color.FromArgb(30, 41, 59),
@@ -135,7 +135,7 @@ public class ProjectDetailsForm : Form
             Cursor = Cursors.Hand
         };
         btnGithub.FlatAppearance.BorderColor = Color.FromArgb(51, 65, 85);
-        btnGithub.Click += (s, e) => OpenUrl("https://github.com");
+        btnGithub.Click += (s, e) => OpenUrl("https://github.com/Ayesha-Abdullah-mvs/HomeFitPlanner");
         Controls.Add(btnGithub);
 
         // Draggable Form on mouse down

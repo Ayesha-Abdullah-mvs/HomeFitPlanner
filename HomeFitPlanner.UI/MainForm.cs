@@ -122,7 +122,7 @@ public partial class MainForm : Form
 
         var lblSidebarLevel = new Label
         {
-            Text = "• Active Athlete",
+            Text = "• Active Member",
             Font = new Font("Segoe UI", 7.5f, FontStyle.Regular),
             ForeColor = Color.FromArgb(52, 211, 153),
             Location = new Point(48, 28),
@@ -160,7 +160,6 @@ public partial class MainForm : Form
             "Substitutes and Level-Up",
             "Progress",
             "Saved Plans",
-            "Performance Lab",
             "Welcome & Profile"
         };
 
@@ -173,7 +172,6 @@ public partial class MainForm : Form
             "🔄 Substitutes [M2 Preview]",
             "📈 Progress Analytics",
             "📂 Saved Plans [M2 Preview]",
-            "⚡ Performance Lab",
             "👤 Edit Profile & Setup"
         };
 
@@ -319,13 +317,12 @@ public partial class MainForm : Form
             "Substitutes and Level-Up" => _screen6,
             "Progress" => _screen7,
             "Saved Plans" => _screen8,
-            "Performance Lab" => _screen9,
             _ => _screen2
         };
 
         _lblTopTitle.Text = screenName switch
         {
-            "Welcome & Profile" => "Athlete Profile & Medical Limitations Setup",
+            "Welcome & Profile" => "My Profile & Fitness Setup",
             "Dashboard" => "Dashboard Overview & Adaptive Health Metrics",
             "Weekly Plan" => "Weekly Schedule & Periodized Workout Plan",
             "Today's Workout" => "Guided Workout Session & Real-Time Player",
@@ -333,7 +330,6 @@ public partial class MainForm : Form
             "Substitutes and Level-Up" => "Progression Graph & BFS Exercise Substitution",
             "Progress" => "Progress Tracker & Streak Analytics",
             "Saved Plans" => "Saved Plans Storage (Binary Search Tree & AVL Tree)",
-            "Performance Lab" => "Big-O Performance Benchmarking Lab",
             _ => screenName
         };
 
@@ -388,9 +384,6 @@ public partial class MainForm : Form
                 break;
             case "Saved Plans":
                 _screen8.RefreshData();
-                break;
-            case "Performance Lab":
-                _screen9.RefreshData();
                 break;
         }
     }

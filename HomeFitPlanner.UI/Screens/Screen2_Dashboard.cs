@@ -51,7 +51,7 @@ public class Screen2_Dashboard : UserControl
         var headerPanel = new Panel { Location = new Point(24, 20), Size = new Size(950, 60) };
         _lblWelcomeGreeting = new Label
         {
-            Text = "Good day, Athlete!",
+            Text = "Good day! Ready to move?",
             Font = UITheme.HeaderFont,
             ForeColor = UITheme.TextMain,
             AutoSize = true,
@@ -59,7 +59,7 @@ public class Screen2_Dashboard : UserControl
         };
         var lblSub = new Label
         {
-            Text = "Here is your training overview for today. Stay consistent and take each movement step-by-step.",
+            Text = "Here is your fitness overview for today. Stay consistent and take each movement step-by-step.",
             Font = UITheme.BodyFont,
             ForeColor = UITheme.TextMuted,
             AutoSize = true,

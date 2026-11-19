@@ -111,7 +111,7 @@ public class Screen1_WelcomeProfile : UserControl
         AddStepHeader(pnlStep1, "Step 1: About You", "Personal identifiers and age parameters");
 
         var lblName = new Label { Text = "Full Name:", Location = new Point(16, 45), AutoSize = true, Font = UITheme.BodyFont };
-        _txtName = new TextBox { Text = "Athlete", Location = new Point(16, 68), Size = new Size(200, 24) };
+        _txtName = new TextBox { Text = "Your Name", Location = new Point(16, 68), Size = new Size(200, 24) };
 
         var lblAge = new Label { Text = "Age (18+):", Location = new Point(236, 45), AutoSize = true, Font = UITheme.BodyFont };
         _numAge = new NumericUpDown { Minimum = 18, Maximum = 99, Value = 32, Location = new Point(236, 68), Size = new Size(80, 24) };

@@ -7,27 +7,27 @@ namespace HomeFitPlanner.UI.Controls;
 
 public static class UITheme
 {
-    // Color Palette
-    public static readonly Color Background = Color.FromArgb(248, 250, 252);         // Slate 50
-    public static readonly Color SidebarBg = Color.FromArgb(15, 23, 42);             // Slate 900
-    public static readonly Color SidebarHover = Color.FromArgb(30, 41, 59);          // Slate 800
-    public static readonly Color SidebarActive = Color.FromArgb(79, 70, 229);        // Indigo 600
-    public static readonly Color SidebarText = Color.FromArgb(226, 232, 240);        // Slate 200
-    public static readonly Color CardBg = Color.White;
-    public static readonly Color CardBorder = Color.FromArgb(226, 232, 240);         // Slate 200
-    public static readonly Color TextMain = Color.FromArgb(15, 23, 42);              // Slate 900
-    public static readonly Color TextMuted = Color.FromArgb(100, 116, 139);          // Slate 500
-    public static readonly Color Primary = Color.FromArgb(79, 70, 229);              // Indigo 600
-    public static readonly Color PrimaryHover = Color.FromArgb(67, 56, 202);         // Indigo 700
-    public static readonly Color Secondary = Color.FromArgb(13, 148, 136);           // Teal 600
-    public static readonly Color Success = Color.FromArgb(16, 185, 129);             // Emerald 500
+    // Color Palette - Cyber-Athletic Neon Volt & Electric Purple Dark Theme
+    public static readonly Color Background = Color.FromArgb(8, 9, 12);               // Pitch Black
+    public static readonly Color SidebarBg = Color.FromArgb(10, 11, 16);             // Sidebar Deep Dark
+    public static readonly Color SidebarHover = Color.FromArgb(24, 26, 38);          // Dark Surface Hover
+    public static readonly Color SidebarActive = Color.FromArgb(204, 255, 0);        // Neon Volt / Lime #CCFF00
+    public static readonly Color SidebarText = Color.FromArgb(160, 165, 181);        // Muted Gray
+    public static readonly Color CardBg = Color.FromArgb(16, 17, 24);                // Card Dark Slate
+    public static readonly Color CardBorder = Color.FromArgb(34, 36, 52);            // Card Border
+    public static readonly Color TextMain = Color.FromArgb(255, 255, 255);           // Pure White
+    public static readonly Color TextMuted = Color.FromArgb(130, 136, 154);          // Slate Muted
+    public static readonly Color Primary = Color.FromArgb(204, 255, 0);              // Neon Volt / Lime
+    public static readonly Color PrimaryHover = Color.FromArgb(216, 255, 51);        // Neon Volt Hover
+    public static readonly Color Secondary = Color.FromArgb(80, 43, 251);            // Electric Purple
+    public static readonly Color Success = Color.FromArgb(204, 255, 0);              // Neon Volt Accent
     public static readonly Color Warning = Color.FromArgb(245, 158, 11);             // Amber 500
     public static readonly Color Danger = Color.FromArgb(239, 68, 68);               // Rose 500
 
     // Day Colors
     public static readonly Color StrengthDay = Color.FromArgb(59, 130, 246);         // Blue
     public static readonly Color CardioDay = Color.FromArgb(249, 115, 22);           // Orange
-    public static readonly Color MixedDay = Color.FromArgb(168, 85, 247);            // Purple
+    public static readonly Color MixedDay = Color.FromArgb(80, 43, 251);             // Electric Purple
     public static readonly Color RestDay = Color.FromArgb(100, 116, 139);            // Slate
 
     // Fonts
@@ -69,7 +69,7 @@ public static class UITheme
             Location = new Point(x, y),
             Size = new Size(width, height),
             BackColor = Primary,
-            ForeColor = Color.White,
+            ForeColor = Color.Black,
             FlatStyle = FlatStyle.Flat,
             Font = SubtitleFont,
             Cursor = Cursors.Hand
@@ -85,7 +85,7 @@ public static class UITheme
             Text = text,
             Location = new Point(x, y),
             Size = new Size(width, height),
-            BackColor = Color.FromArgb(241, 245, 249),
+            BackColor = Color.FromArgb(24, 26, 38),
             ForeColor = TextMain,
             FlatStyle = FlatStyle.Flat,
             Font = SubtitleFont,
