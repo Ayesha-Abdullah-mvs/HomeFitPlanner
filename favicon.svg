@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#38bdf8" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background rounded squircle -->
+  <rect width="64" height="64" rx="16" fill="#090d16"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#grad)" stroke-width="2" stroke-opacity="0.4"/>
+  <!-- Stylized Fitness Barbell / Diamond Core -->
+  <g filter="url(#glow)">
+    <!-- Central Bar -->
+    <rect x="14" y="29" width="36" height="6" rx="3" fill="url(#grad)"/>
+    <!-- Left Plates -->
+    <rect x="20" y="19" width="4" height="26" rx="2" fill="url(#grad)"/>
+    <rect x="13" y="22" width="5" height="20" rx="2.5" fill="#38bdf8"/>
+    <!-- Right Plates -->
+    <rect x="40" y="19" width="4" height="26" rx="2" fill="url(#grad)"/>
+    <rect x="46" y="22" width="5" height="20" rx="2.5" fill="#38bdf8"/>
+    <!-- Center energetic workout core -->
+    <circle cx="32" cy="32" r="3.5" fill="#ffffff"/>
+  </g>
+</svg>
+
